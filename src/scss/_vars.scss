@@ -1,0 +1,125 @@
+
+
+// COLORS
+
+$colors: (
+
+  // header
+  header: (
+    background: #FFF,
+    border: indigo,
+    shadow: #999,
+    text-main: #333,
+    text-header: #fc8101,
+    text-link: indigo,
+  ),
+
+  // main
+  main: (
+    background: #333,
+    border: #AA0,
+    shadow: #A0A,
+    text-main: #FFF,
+    text-header: #fc8101,
+    text-link: #0290f9,
+  ),
+
+  // aside
+  aside: (
+    background: #fc8101,
+    border: #33F,
+    shadow: #3F3,
+    text-main: #333,
+    text-header: indigo,
+    text-link: #FFF,
+  ),
+
+  // footer
+  footer: (
+    background: #20FC8F,
+    border: #00F,
+    shadow: #0F0,
+    text-main: #2D2D2A,
+    text-header: #38423B,
+    text-link: #3F5E5A,
+  ),
+);
+// general
+$primary: #000;
+$secondary: indigo;
+$success: green;
+$danger: red;
+$warning: yellow;
+$info: lightblue;
+$light: lightgrey;
+$dark: #333;
+$muted: darkgrey;
+
+
+
+// SIZES
+
+$sizes: (
+
+  // header
+  header: (
+    font-main: 14px,
+    font-header: 24px,
+    font-link: 12px,
+  ),
+
+  // main
+  main: (
+    font-main: 14px,
+    font-header: 24px,
+    font-link: 12px,
+  ),
+
+  // aside
+  aside: (
+    font-main: 14px,
+    font-header: 24px,
+    font-link: 12px,
+  ),
+
+  // footer
+  footer: (
+    font-main: 14px,
+    font-header: 24px,
+    font-link: 12px,
+  ),
+
+);
+
+// FONTS
+$fonts: (
+
+  // header
+  header: (
+    font-main: 'JetBrains Mono Regular',
+    font-header: 'JetBrains Mono Regular',
+    font-link: 'JetBrains Mono Italic',
+  ),
+
+  // main
+  main: (
+    font-main: 'JetBrains Mono Regular',
+    font-header: 'JetBrains Mono Regular',
+    font-link: 'JetBrains Mono Italic',
+  ),
+
+  // aside
+  aside: (
+    font-main: 'JetBrains Mono Regular',
+    font-header: 'JetBrains Mono Regular',
+    font-link: 'JetBrains Mono Italic',
+  ),
+
+  // footer
+  footer: (
+    font-main: 'JetBrains Mono Regular',
+    font-header: 'JetBrains Mono Regular',
+    font-link: 'JetBrains Mono Italic',
+  ),
+
+);
