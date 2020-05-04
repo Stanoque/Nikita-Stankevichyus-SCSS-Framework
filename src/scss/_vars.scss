@@ -1,4 +1,17 @@
+/*
+ * PREFIXES/STANDALONE NAMES:
+ * 
+ * font -- font size 
+ * text -- text color
+*/
 
+/*
+ * POSTFIXES:
+ * 
+ * main -- general elements, text by default and elements with corresponding classes
+ * header -- <h#>, and elements with corresponding classes
+ * link -- <a>, <link> and elements with corresponding classes
+*/
 
 // COLORS
 
@@ -44,7 +57,9 @@ $colors: (
     text-link: #3F5E5A,
   ),
 );
+
 // general
+// Those are made in fashion of bootstrap. Usage is arbitrary
 $primary: #000;
 $secondary: indigo;
 $success: green;

@@ -1,3 +1,6 @@
+// MARGINS
+
+// Setting margins for each side (and horizontal/vertical/all) from -200px to 200px
 @for $i from -200 through 200 {
   .mg-r-#{$i} { margin-right: $i * 1px !important; }
 }
@@ -28,6 +31,7 @@
   .mg-#{$i} { margin: $i * 1px !important; }
 }
 
+// Auto margins for each side (and horizontal/vertical/all)
 .mg-r-auto {
   margin-right: auto !important;
 }
@@ -59,6 +63,9 @@
 }
 
 
+// PADDINGS
+
+// Setting paddings for each side (and horizontal/vertical/all) from -200px to 200px
 @for $i from -200 through 200 {
   .pd-r-#{$i} { padding-right: $i * 1px !important; }
 }
@@ -89,6 +96,8 @@
   .pd-#{$i} { padding: $i * 1px !important; }
 }
 
+
+// Auto paddings for each side (and horizontal/vertical/all)
 .pd-r-auto {
   padding-right: auto !important;
 }

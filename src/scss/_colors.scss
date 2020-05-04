@@ -12,6 +12,7 @@ $general-colors: (
   muted: $muted
 );
 
+// Making rules for each color in fashion of atomic css
 @each $color-name, $color-value in $general-colors {
   .text-color-#{$color-name} { color: $color-value; }
   .bg-color-#{$color-name} { background-color: $color-value; }

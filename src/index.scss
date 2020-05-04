@@ -9,8 +9,12 @@
 @import "scss/margins-paddings";
 @import "scss/colors";
 @import "scss/animations";
+@import "scss/fonts/FontAwesome/fontawesome.scss";
+@import "scss/fonts/FontAwesome/solid.scss";
 
+// Setting data from vars.scss for each part of the page (header, main, aside, footer)
 
+// COLORS
 @each $part, $data in $colors {
   #{$part} {
     background-color: map-get($data, background);
@@ -27,6 +31,7 @@
   }
 }
 
+// SIZES
 @each $part, $data in $sizes {
   #{$part} {
     .text-main, p {
@@ -41,6 +46,7 @@
   }
 }
 
+// FONTS
 @each $part, $data in $fonts {
   #{$part} {
     .text-main, p {
