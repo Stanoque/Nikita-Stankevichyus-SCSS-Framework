@@ -1,8 +1,7 @@
 /*
  * PREFIXES/STANDALONE NAMES:
  * 
- * font -- font size 
- * text -- text color
+ * 
 */
 
 /*
@@ -19,16 +18,6 @@ $colors: (
 
   // header
   header: (
-    background: #FFF,
-    border: indigo,
-    shadow: #999,
-    text-main: #333,
-    text-header: #fc8101,
-    text-link: indigo,
-  ),
-
-  // main
-  main: (
     background: #333,
     border: #AA0,
     shadow: #A0A,
@@ -37,10 +26,20 @@ $colors: (
     text-link: #0290f9,
   ),
 
+  // main
+  main: (
+    background: #FFF,
+    border: #fc8101,
+    shadow: #999,
+    text-main: #333,
+    text-header: #fc8101,
+    text-link: indigo,
+  ),
+
   // aside
   aside: (
     background: #fc8101,
-    border: #33F,
+    border: indigo,
     shadow: #3F3,
     text-main: #333,
     text-header: indigo,
@@ -50,7 +49,7 @@ $colors: (
   // footer
   footer: (
     background: #20FC8F,
-    border: #00F,
+    border: #38423B,
     shadow: #0F0,
     text-main: #2D2D2A,
     text-header: #38423B,
@@ -60,11 +59,11 @@ $colors: (
 
 // general
 // Those are made in fashion of bootstrap. Usage is arbitrary
-$primary: #000;
+$primary: blue;
 $secondary: indigo;
 $success: green;
 $danger: red;
-$warning: yellow;
+$warning: orange;
 $info: lightblue;
 $light: lightgrey;
 $dark: #333;
@@ -79,28 +78,56 @@ $sizes: (
   // header
   header: (
     font-main: 14px,
-    font-header: 24px,
+    font-header: (
+      h1: 36px,
+      h2: 32px,
+      h3: 27px,
+      h4: 25px,
+      h5: 21px,
+      h6: 19px,
+    ),
     font-link: 12px,
   ),
 
   // main
   main: (
     font-main: 14px,
-    font-header: 24px,
+    font-header: (
+      h1: 36px,
+      h2: 32px,
+      h3: 27px,
+      h4: 25px,
+      h5: 21px,
+      h6: 19px,
+    ),
     font-link: 12px,
   ),
 
   // aside
   aside: (
     font-main: 14px,
-    font-header: 24px,
+    font-header: (
+      h1: 36px,
+      h2: 32px,
+      h3: 27px,
+      h4: 25px,
+      h5: 21px,
+      h6: 19px,
+    ),
     font-link: 12px,
   ),
 
   // footer
   footer: (
     font-main: 14px,
-    font-header: 24px,
+    font-header: (
+      h1: 36px,
+      h2: 32px,
+      h3: 27px,
+      h4: 25px,
+      h5: 21px,
+      h6: 19px,
+    ),
     font-link: 12px,
   ),
 
@@ -111,30 +138,105 @@ $fonts: (
 
   // header
   header: (
-    font-main: 'JetBrains Mono Regular',
-    font-header: 'JetBrains Mono Regular',
-    font-link: 'JetBrains Mono Italic',
+    font-main: 'Roboto',
+    font-header: 'Roboto',
+    font-link: 'Roboto',
+
+    font-weight-main: 500,
+    font-weight-header: 700,
+    font-weight-link: 400,
+
+    font-style-main: normal,
+    font-style-header: normal,
+    font-style-link: italic,
   ),
 
   // main
   main: (
-    font-main: 'JetBrains Mono Regular',
-    font-header: 'JetBrains Mono Regular',
-    font-link: 'JetBrains Mono Italic',
+    font-main: 'Roboto',
+    font-header: 'Roboto',
+    font-link: 'Roboto',
+
+    font-weight-main: 400,
+    font-weight-header: 700,
+    font-weight-link: 400,
+
+    font-style-main: normal,
+    font-style-header: normal,
+    font-style-link: italic,
   ),
 
   // aside
   aside: (
-    font-main: 'JetBrains Mono Regular',
-    font-header: 'JetBrains Mono Regular',
-    font-link: 'JetBrains Mono Italic',
+    font-main: 'Roboto',
+    font-header: 'Roboto',
+    font-link: 'Roboto',
+
+    font-weight-main: 500,
+    font-weight-header: 700,
+    font-weight-link: 400,
+
+    font-style-main: normal,
+    font-style-header: normal,
+    font-style-link: italic,
   ),
 
   // footer
   footer: (
-    font-main: 'JetBrains Mono Regular',
-    font-header: 'JetBrains Mono Regular',
-    font-link: 'JetBrains Mono Italic',
+    font-main: 'Roboto',
+    font-header: 'Roboto',
+    font-link: 'Roboto',
+
+    font-weight-main: 500,
+    font-weight-header: 700,
+    font-weight-link: 400,
+
+    font-style-main: normal,
+    font-style-header: normal,
+    font-style-link: italic,
   ),
 
 );
+
+// If true, parameters below will be applied to all parts
+$use-universal: false;
+
+// Universal parameters
+$universal: (
+
+  colors: (
+    background: #333,
+    border: #AA0,
+    shadow: #A0A,
+    text-main: #FFF,
+    text-header: #fc8101,
+    text-link: #0290f9,
+  ),
+
+  size: (
+    font-main: 14px,
+    font-header: (
+      h1: 36px,
+      h2: 32px,
+      h3: 27px,
+      h4: 25px,
+      h5: 21px,
+      h6: 19px,
+    ),
+    font-link: 12px,
+  ),
+
+  font: (
+    font-main: 'Roboto',
+    font-header: 'Roboto',
+    font-link: 'Roboto',
+
+    font-weight-main: 500,
+    font-weight-header: 700,
+    font-weight-link: 400,
+
+    font-style-main: normal,
+    font-style-header: normal,
+    font-style-link: italic,
+  ),
+)
