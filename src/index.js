@@ -81,8 +81,27 @@ function NavBar(props) {
       </nav>
     )
   } else {
-    return '';
+    return null;
   }
+}
+
+function MainContent(props) {
+  if(props.name==='main') {
+    return (
+      <div className='container examples'>
+        <code> this.is => code.example</code>
+        <p className='text-color-primary'> Primary text, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </p>
+        <p className='text-color-secondary'> Secondary text, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </p>
+        <p className='text-color-success'> Success text, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </p>
+        <p className='text-color-danger'> Danger text, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </p>
+        <p className='text-color-info'> Info text, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </p>
+        <p className='text-color-light'> Light text, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </p>
+        <p className='text-color-dark'> Dark text, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </p>
+        <p className='text-color-muted'> Muted text, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </p>
+      </div>
+    ) 
+  } 
+  else return null;
 }
 
 function Default(props) {
@@ -101,6 +120,7 @@ function Default(props) {
         </a>
         <Buttons name = {props.name} />
         <NavBar name = {props.name} />
+        <MainContent name = {props.name} />
       </div>
     )
   

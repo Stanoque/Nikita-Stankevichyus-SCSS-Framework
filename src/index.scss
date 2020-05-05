@@ -156,10 +156,6 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  .main {
-    display: flex;
-    height: 100%;
-  }
 }
 
 .text-link, a, link {
@@ -167,8 +163,12 @@
   text-decoration: underline;
 }
 
-.container { 
-  height: 100%;
+
+code {
+  background-color: $light;
+  color: map-get(map-get($colors, main), font-main);
+  font-family: 'JetBrains Mono';
+  padding: 5px;
 }
 
 main h1, header h1 {
@@ -189,4 +189,6 @@ aside h1, footer h1 {
     margin-bottom: 10px;
   }
 }
-
+.examples > *{
+  margin-top: 15px;
+}
