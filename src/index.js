@@ -111,7 +111,7 @@ class Framework extends React.Component {
   render() {
     return (
       <div className="body">
-        <header className="header header--regular">
+        <header className="header header--regular pd-b-100 pd-r-15">
           <Default name='header' />
         </header>
         <main className="main main--regular">
