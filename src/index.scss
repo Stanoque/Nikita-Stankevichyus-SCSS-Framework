@@ -16,6 +16,9 @@
 // Or, if there universal parameters, they'll be setted to everything
 @if $use-universal != true {
 
+  body * {
+    font-family: map-get(map-get($fonts, main), font-main);
+  }
   // COLORS
   @each $part, $data in $colors {
     #{$part} {
@@ -33,7 +36,7 @@
       button {
         padding: 10px;
         background-color: map-get($data, text-link);
-        border: 0px solid map-get($data, text-main);
+        border: 1px solid map-get($data, text-link);
         border-radius: 5px;
         color: map-get($data, background);
         -webkit-transition: background-color 0.5s, color 0.5s;
@@ -41,10 +44,16 @@
       }
 
       button:hover, button:active {
-        
-          background-color: desaturate(map-get($data, background), 50%);
-          color: map-get($data, text-link);
-        
+        background-color: desaturate(map-get($data, background), 50%);
+        color: map-get($data, text-link);
+      }
+
+      input {
+        background-color: white;
+        border: 3px solid map-get($data, border);
+        color: #333;
+        border-radius: 5px;
+        padding: 10px;
       }
     }
   }
@@ -191,4 +200,12 @@ aside h1, footer h1 {
 }
 .examples > *{
   margin-top: 15px;
+}
+
+.test-modal {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border: 2px solid orange;
+  border-radius: 5px;
 }

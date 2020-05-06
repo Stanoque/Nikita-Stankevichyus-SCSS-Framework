@@ -18,43 +18,29 @@ $general-colors: (
 	$md-height: 200px;
 	$sm-height: 215px;
 	$xs-height: 230px;
+	$accumulator: 17.5px;
 
-
-	height: $xl-height;
 	position: fixed;
 	top: 0;
 	width: 100%;
 
-	+ main {
-		margin-top: $xl-height;
+	.container {
+		height: 100%;
+		width: 100%;
 	}
-	@media (max-width: 960px) {
-		height: $lg-height;
-		+ main {
-			margin-top: $lg-height;
+
+	@for $i from 1 through 16 {
+		@media (max-width: $i * 100px) {
+			$height: $i * $accumulator;
+			height: $height;
+			
+			+ main {
+				margin-top: $height + 5.5 * $accumulator;
+			}
 		}
 	}
 
-	@media (max-width: 780px) {
-		height: $md-height;
-		+ main {
-			margin-top: $md-height;
-		}
-	}
-
-	@media (max-width: 576px) {
-		height: $sm-height;
-		+ main {
-			margin-top: $sm-height;
-		}
-	}
-
-	@media (max-width: 400px) {
-		height: $xs-height;
-		+ main {
-			margin-top: $xs-height;
-		}
-	}
+	
 }
 
 .header--regular {
@@ -105,7 +91,7 @@ $general-colors: (
 
 .nav--horizontal {
 	min-height: max-content;
-	height: 50%;
+	height: 25%;
 	> ul {
 		height: 100%;
 		list-style-type: none;
@@ -147,17 +133,19 @@ $general-colors: (
 
 @each $color-name, $color-value in $general-colors {
 	.button--#{$color-name} {
+		box-sizing: border-box;
 		padding: 10px;
     background-color: $color-value;
-    border: 0px solid lighten($color-value, 15%);
+    border: 1px solid $color-value;
     border-radius: 5px;
     color: #FFF;
     -webkit-transition: background-color 0.5s, color 0.5s;
     transition: background-color 0.5s, color 0.5s;
 	}
 	.button--#{$color-name}:hover, .button--#{$color-name}:active {
-		background-color: darken($color-value, 7.5%);
-		color: #FFF;
+		background-color: #FFF;
+		color: $color-value;
+		border: 1px solid $color-value;
 	}
 }
 
@@ -180,7 +168,7 @@ $general-colors: (
 }
 
 .modal_window {
-  display: none;
+  display: block;
 	position: fixed;
 	top: 50vh;
 	left: 50vw;

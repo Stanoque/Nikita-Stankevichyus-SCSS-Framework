@@ -1,0 +1,326 @@
+/*
+ * PREFIXES/STANDALONE NAMES:
+ * 
+ * 
+*/
+/*
+ * POSTFIXES:
+ * 
+ * main -- general elements, text by default and elements with corresponding classes
+ * header -- <h#>, and elements with corresponding classes
+ * link -- <a>, <link> and elements with corresponding classes
+*/
+.header--fixed {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  @media (max-width: 100px) {
+    .header--fixed {
+      height: 300px; }
+      main {
+        margin-top: 300px; } }
+  @media (max-width: 200px) {
+    .header--fixed {
+      height: 600px; }
+      main {
+        margin-top: 600px; } }
+  @media (max-width: 300px) {
+    .header--fixed {
+      height: 900px; }
+      main {
+        margin-top: 900px; } }
+  @media (max-width: 400px) {
+    .header--fixed {
+      height: 1200px; }
+      main {
+        margin-top: 1200px; } }
+  @media (max-width: 500px) {
+    .header--fixed {
+      height: 1500px; }
+      main {
+        margin-top: 1500px; } }
+  @media (max-width: 600px) {
+    .header--fixed {
+      height: 1800px; }
+      main {
+        margin-top: 1800px; } }
+  @media (max-width: 700px) {
+    .header--fixed {
+      height: 2100px; }
+      main {
+        margin-top: 2100px; } }
+  @media (max-width: 800px) {
+    .header--fixed {
+      height: 2400px; }
+      main {
+        margin-top: 2400px; } }
+  @media (max-width: 900px) {
+    .header--fixed {
+      height: 2700px; }
+      main {
+        margin-top: 2700px; } }
+  @media (max-width: 1000px) {
+    .header--fixed {
+      height: 3000px; }
+      main {
+        margin-top: 3000px; } }
+  @media (max-width: 1100px) {
+    .header--fixed {
+      height: 3300px; }
+      main {
+        margin-top: 3300px; } }
+  @media (max-width: 1200px) {
+    .header--fixed {
+      height: 3600px; }
+      main {
+        margin-top: 3600px; } }
+  @media (max-width: 1300px) {
+    .header--fixed {
+      height: 3900px; }
+      main {
+        margin-top: 3900px; } }
+  @media (max-width: 1400px) {
+    .header--fixed {
+      height: 4200px; }
+      main {
+        margin-top: 4200px; } }
+  @media (max-width: 1500px) {
+    .header--fixed {
+      height: 4500px; }
+      main {
+        margin-top: 4500px; } }
+
+.header--regular {
+  min-height: max-content;
+  flex: 1; }
+  .header--regular .container {
+    height: 100%;
+    width: 100%; }
+
+.main--regular {
+  min-height: min-content;
+  display: flex;
+  flex: 1 0 auto; }
+  @media (max-width: 576.5px) {
+    .main--regular {
+      flex-direction: column; }
+      .main--regular > * {
+        width: 100% !important; }
+      .main--regular .content {
+        order: -3; } }
+
+.aside--toRight {
+  order: 2;
+  width: 25%;
+  min-width: min-content; }
+
+.aside--toLeft {
+  order: -1;
+  width: 25%;
+  min-width: min-content; }
+
+.footer--regular {
+  min-height: min-content; }
+
+.footer--fixed {
+  min-height: min-content;
+  flex-shrink: 0; }
+
+.nav--horizontal {
+  min-height: max-content;
+  height: 25%; }
+  .nav--horizontal > ul {
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+  .nav--horizontal .nav_link {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0290f9;
+    flex: 1;
+    margin-right: 0.5%;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s; }
+    .nav--horizontal .nav_link a {
+      text-align: center;
+      text-decoration: none;
+      font-style: normal;
+      font-size: 24px;
+      color: #333; }
+  .nav--horizontal .nav_link:hover {
+    background-color: #333; }
+    .nav--horizontal .nav_link:hover a {
+      color: #0290f9; }
+
+.button--primary {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: blue;
+  border: 1px solid blue;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s; }
+
+.button--primary:hover, .button--primary:active {
+  background-color: #FFF;
+  color: blue;
+  border: 1px solid blue; }
+
+.button--secondary {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: indigo;
+  border: 1px solid indigo;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s; }
+
+.button--secondary:hover, .button--secondary:active {
+  background-color: #FFF;
+  color: indigo;
+  border: 1px solid indigo; }
+
+.button--success {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s; }
+
+.button--success:hover, .button--success:active {
+  background-color: #FFF;
+  color: green;
+  border: 1px solid green; }
+
+.button--danger {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s; }
+
+.button--danger:hover, .button--danger:active {
+  background-color: #FFF;
+  color: red;
+  border: 1px solid red; }
+
+.button--warning {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s; }
+
+.button--warning:hover, .button--warning:active {
+  background-color: #FFF;
+  color: orange;
+  border: 1px solid orange; }
+
+.button--info {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s; }
+
+.button--info:hover, .button--info:active {
+  background-color: #FFF;
+  color: lightblue;
+  border: 1px solid lightblue; }
+
+.button--light {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s; }
+
+.button--light:hover, .button--light:active {
+  background-color: #FFF;
+  color: lightgrey;
+  border: 1px solid lightgrey; }
+
+.button--dark {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s; }
+
+.button--dark:hover, .button--dark:active {
+  background-color: #FFF;
+  color: #333;
+  border: 1px solid #333; }
+
+.button--muted {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: darkgrey;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s; }
+
+.button--muted:hover, .button--muted:active {
+  background-color: #FFF;
+  color: darkgrey;
+  border: 1px solid darkgrey; }
+
+.modal_fade:before {
+  display: none;
+  content: '';
+  background: #333;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 1; }
+
+.modal_fade_trick:before {
+  display: block; }
+
+.modal_window {
+  display: none;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 1; }
+
+.hidden {
+  display: none !important;
+  position: absolute !important;
+  pointer-events: none !important; }
+
+/*# sourceMappingURL=kek.css.map */
