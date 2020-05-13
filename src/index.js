@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-function changeSide(){
-
-}
 
 function Buttons(props) {
   if (props.name === 'main') 
@@ -121,6 +118,7 @@ function MainContent(props) {
 
 class ShowModal extends React.Component {
   constructor(props){
+    super(props);
     this.state = {
       shown: false,
     }
